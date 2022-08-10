@@ -1,0 +1,64 @@
+body {
+  background: rgb(24, 23, 23);
+  background: radial-gradient(
+    circle,
+    rgba(24, 23, 23, 1) 0%,
+    rgba(16, 171, 189, 1) 100%
+  );
+  overflow-x: hidden;
+}
+.webgl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: none;
+  mix-blend-mode: normal;
+  z-index: -999;
+}
+nav {
+  background-color: hsl(0, 0%, 85%);
+}
+
+.button-bg {
+  background-color: #0d0d0d;
+  color: hsl(0, 0%, 85%);
+}
+
+h1 {
+  color: aliceblue;
+}
+.card-custom {
+  width: 350px;
+  height: 500px;
+  border-radius: 1rem;
+  border: 1px soli transparent;
+  backdrop-filter: blur(2rem);
+  box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
+  background: hsla(0, 0%, 100%, 0.15);
+  border-top-color: rgba(225, 225, 225, 0.5);
+  border-left-color: rgba(225, 225, 225, 0.5);
+  border-bottom-color: rgba(225, 225, 225, 0.1);
+  border-right-color: rgba(225, 225, 225, 0.1);
+  color: rgb(246, 249, 249);
+}
+
+.object {
+  height: 220px;
+  width: 220px;
+  background: radial-gradient(#05f2db, #0faebf);
+  bottom: -100px;
+  left: -90px;
+}
+
+.object-2 {
+  border-radius: 59% 41% 46% 54% / 34% 46% 54% 66%;
+  /* These are ADDITIONAL styles - add them if you want an object exactly like in the demo above */
+  width: 200px;
+  height: 200px;
+  background: #05f2db;
+  background: -webkit-linear-gradient(to right, #0faebf, #05f2db);
+  background: linear-gradient(to right, #0faebf, #05f2db);
+  top: -50px;
+  right: 10px;
+  z-index: -20;
+}

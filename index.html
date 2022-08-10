@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Automation changed the industry</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/personalization.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- Container wrapper -->
+        <div class="container">
+          <!-- Navbar brand -->
+          <a class="navbar-brand me-2" href="/img/logo192.png">
+            <img
+              src="/img/logo192.png"
+              height="26"
+              alt="IIS Logo"
+              loading="lazy"
+              style="margin-top: -1px"
+            />
+          </a>
+
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarButtonsExample"
+            aria-controls="navbarButtonsExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarButtonsExample">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+            <!-- Left links -->
+
+            <div class="d-flex align-items-center">
+              <button type="button" class="btn button-bg me-3">Sign up</button>
+            </div>
+          </div>
+          <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!-- Navbar -->
+    </header>
+    <main>
+    <div class="container">
+      <section>
+        <div class="vh-100 d-flex align-items-center justify-content-center">
+          <div class="text-center">
+      <h1 class="display-3 text-uppercase fw-bold mb-4">Automation has changed the industry</h1>
+      </div>
+      </div>
+    </section>
+    <div class="row">
+      <div class="position-relative col-md-12 d-flex flex-wrap justify-content-center">
+        <div class="position-absolute rounded-circle strong-5-strong object">
+        </div>
+        <div class="position-absolute strong-5-strong object-2">
+        </div>
+        <div class="card card-custom m-4 text-center p-4" data-tilt>
+          <img src="/img/3.jpg" class="card-img-top" alt="robots">
+          <div class="card-body">
+            <h5 class="card-title mt-3">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn button-bg mt-5">Go somewhere</a>
+          </div>
+  </div>
+  <div class="card card-custom m-4 text-center p-4" data-tilt>
+          <img src="/img/3.jpg" class="card-img-top" alt="robots">
+          <div class="card-body">
+            <h5 class="card-title mt-3">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn button-bg mt-5">Go somewhere</a>
+          </div>
+  </div>
+  <div class="card card-custom m-4 text-center p-4" data-tilt>
+          <img src="/img/3.jpg" class="card-img-top" alt="robots">
+          <div class="card-body">
+            <h5 class="card-title mt-3">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn button-bg mt-5">Go somewhere</a>
+          </div>
+  </div>
+</div>
+      </div>
+    </section>
+    </main>
+    <canvas class="webgl"></canvas>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"
+    ></script>
+    <script
+      src="/src/js/vanilla-tilt.js"
+    >
+  // VanillaTilt.init(document.querySelector("#card-custom"), {
+  //   startX: 45,
+  //   startY: 45,
+  //   reset: false,
+  // })
+  </script>
+    <!-- Three.js core -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+    ></script>
+    <!-- Three.js setup -->
+    <script type="text/javascript">
+      // Texture
+      const textureLoader = new THREE.TextureLoader()
+      const normalTexture = textureLoader.load("/img/rob.png")
+
+      // Canvas
+      const canvas = document.querySelector("canvas.webgl")
+
+      // Scene
+      const scene = new THREE.Scene()
+
+      // Objects 0.1, 1, 5, 3, 5
+      const geometry = new THREE.SphereBufferGeometry(0.5, 65, 65)
+
+      // Materials
+      const material = new THREE.MeshLambertMaterial()
+      material.map = normalTexture
+
+      // Mesh
+      const shape = new THREE.Mesh(geometry, material)
+      scene.add(shape)
+
+      // Lights
+      const pointLight = new THREE.PointLight(0xffffff, 1)
+      pointLight.position.x = 2
+      pointLight.position.y = 3
+      pointLight.position.z = 4
+      scene.add(pointLight)
+
+      /**
+       * Sizes
+       */
+      const sizes = {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      }
+
+      window.addEventListener("resize", () => {
+        // Update sizes
+        sizes.width = window.innerWidth
+        sizes.height = window.innerHeight
+
+        // Update camera
+        camera.aspect = sizes.width / sizes.height
+        camera.updateProjectionMatrix()
+
+        // Update renderer
+        renderer.setSize(sizes.width, sizes.height)
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+      })
+
+      /**
+       * Camera
+       */
+      // Base camera
+      const camera = new THREE.PerspectiveCamera(
+        75,
+        sizes.width / sizes.height,
+        0.1,
+        100
+      )
+      camera.position.x = 0
+      camera.position.y = 0
+      camera.position.z = 2
+      scene.add(camera)
+
+      /**
+       * Renderer
+       */
+      const renderer = new THREE.WebGLRenderer({
+        canvas: canvas,
+      })
+      renderer.setSize(sizes.width, sizes.height)
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+      /**
+       * Animate
+       */
+      document.addEventListener("mousemove", onDocmentMouseMove)
+      let mouseX = 0
+      let mouseY = 0
+
+      let targetX = 0
+      let targetY = 0
+
+      const windowX = window.innerWidth / 2
+      const windowY = window.innerHeight / 2
+
+      function onDocmentMouseMove(event) {
+        mouseX = event.clientX - windowX
+        mouseY = event.clientY - windowY
+      }
+
+      const updateShape = (event) => {
+        shape.position.y = window.scrollY * 0.001
+      }
+
+      window.addEventListener("scroll", updateShape)
+
+      const clock = new THREE.Clock()
+
+      const tick = () => {
+        targetX = mouseX * 0.001
+        targetY = mouseY * 0.001
+
+        const elapsedTime = clock.getElapsedTime()
+
+        // Update objects
+        shape.rotation.y = 0.5 * elapsedTime
+
+        shape.rotation.y = 0.5 * (targetX - shape.rotation.y)
+        shape.rotation.x = 0.5 * (targetY - shape.rotation.x)
+
+        // Update Orbital Controls
+        // controls.update()
+
+        // Render
+        renderer.render(scene, camera)
+
+        // Call tick again on the next frame
+        window.requestAnimationFrame(tick)
+      }
+
+      tick()
+    </script>
+  </body>
+</html>
